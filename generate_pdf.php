@@ -16,6 +16,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         exit;
     }
 
+    // Generate PDF
     try {
         $mpdf = new \Mpdf\Mpdf();
         $mpdf->WriteHTML($data['html']);
